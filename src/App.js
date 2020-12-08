@@ -28,7 +28,13 @@ class App extends PureComponent {
       content: twoValues,
     })
   }
-  delete =() => {
+  delete =(id) => {
+      console.log('topside', id);
+      const house = [...this.state.house];
+      const newHouse = house.filter(h => h.id !== id);
+      this.setState({
+        house: newHouse
+      })
   }
 
   render() {

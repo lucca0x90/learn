@@ -18,10 +18,8 @@ class Content extends PureComponent {
         })
     }
     transDelete= (id) => {
-        const {topside,house} = this.props;
-        house.filter((h) =>h.id !== id);
-        console.log('topside',house)
-        return house;
+        const {topside} = this.props;
+        topside(id);
     }
 
     render() {
