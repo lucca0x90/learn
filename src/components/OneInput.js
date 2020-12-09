@@ -19,11 +19,14 @@ class OneInput extends PureComponent {
     }
 
     submitInputs = () => {
-        const {sub} = this.props;
+        const {sub, add} = this.props;
         const twoValues = this.state.one + ', '+ this.state.second + '!';
+        const one = this.state.one;
+        const two = this.state.second;
         console.log(twoValues);
         
-        sub(twoValues)
+        sub(twoValues);
+        add(one,two);
         
     }
 

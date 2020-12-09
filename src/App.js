@@ -2,6 +2,9 @@ import './App.css';
 import React,{ PureComponent } from "react";
 import OneInput from "./components/OneInput.js";
 import Content from "./components/Content";
+import CreateForm from "./components/CreateForm";
+
+import LiftStateUp from "./components/rate/LiftStateUp";
 
 class App extends PureComponent {
 
@@ -36,6 +39,15 @@ class App extends PureComponent {
         house: newHouse
       })
   }
+  addBed = (one, two) => {
+    const house = [...this.state.house];
+    const value = {id: one, name: two};
+    house.push(value);
+    console.log('add',house);
+    this.setState({
+      house
+    })
+  }
 
   render() {
     const {content, house} = this.state;
@@ -46,9 +58,16 @@ class App extends PureComponent {
           hello
         </header>
 
-        <OneInput sub={this.trans}></OneInput>
+        <OneInput sub={this.trans} add={this.addBed}></OneInput>
+
         <div>app: {content}</div>
         <Content content={content} house={house} topside={this.delete}></Content>
+
+        <div>createForm: controlled components</div>
+        <CreateForm></CreateForm>
+
+        <hr/>
+        <LiftStateUp></LiftStateUp>
       </div>
     );
   }
