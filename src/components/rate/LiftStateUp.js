@@ -8,8 +8,16 @@ class LiftStateUp extends PureComponent {
         currency: ['日元JPY', '人民币CNY'],
     }
 
+    // calc = (j, c) => {
+    //     const moneyJ = j;
+    //     const moneyC = parseFloat(j*0.65)
+    // }
+
     moneyTrans = (currency, money) => {
-        console.log(currency, money)
+        let moneyJ, moneyC;
+        console.log(currency, money);
+        // currency === '日元JPY' ? (moneyJ = money, moneyC = parseFloat(money*0.65)) :
+        // (moneyJ = parseFloat(money/0.65), moneyC = money)
     }
 
     render() {

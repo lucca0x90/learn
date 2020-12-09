@@ -2,18 +2,20 @@ import React,{PureComponent} from 'react';
 
 class CurrenctInput extends PureComponent {
     state={
-        money: '0',
+        money: '',
     }
 
     showNumber = (e) => {
         const {jMoney} = this.props;
-        const {currency} = this.props;
-
         this.setState({
             money: e.target.value,
         })
-        console.log(currency, e.target.value)
-        jMoney(this.props.currency, e.target.value);
+
+     
+        const moneyNumber = Number(e.target.value) ? Number(e.target.value) : '';
+        
+        // console.log(currency, e.target.value)
+        jMoney(this.props.currency, moneyNumber);
     }
 
     render() {
