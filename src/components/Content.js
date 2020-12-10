@@ -23,7 +23,7 @@ class Content extends PureComponent {
     }
 
     render() {
-        console.log('content',this.props)
+        // console.log('content',this.props)
         const {content, house} = this.props;
         const {temper,array} = this.state;
 

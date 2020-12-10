@@ -15,14 +15,14 @@ class CreateForm extends PureComponent {
             'sub value is: ' + this.state.textValue + 
             ' , nullValue is: ' + this.state.nullValue,
         );
-        console.log('null is: ', this.state.nullValue)
+        // console.log('null is: ', this.state.nullValue)
     }
 
     handleInputChange = (e) => {
         const target = e.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
-        console.log(value, name)
+        // console.log(value, name)
 
         this.setState({
             [name]: value,
@@ -70,7 +70,7 @@ class CreateForm extends PureComponent {
                     <input 
                         // name="nullValue" 
                         type="text"
-                        value={null} 
+                        value={nullValue} 
                         onChange={this.handleInputChange}></input>
                 </form>
             </div>

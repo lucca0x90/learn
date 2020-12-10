@@ -13,7 +13,7 @@ class Bed extends PureComponent {
 
     render() {
         const {name} = this.props;
-        console.log(this.props)
+        // console.log(this.props)
 
         return (
             <div>
