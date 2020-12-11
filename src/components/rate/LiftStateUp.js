@@ -14,7 +14,7 @@ class LiftStateUp extends PureComponent {
     calcToC = (j) => {
         const newJ = j.replace(/[^\d\.]/g, '');
         console.log(newJ)
-        const moneyC = newJ !== 0 && newJ.length > 0 ? parseFloat(newJ*0.65).toFixed(2) : '';
+        const moneyC = newJ !== 0 && newJ.length > 0 ? Math.floor(parseFloat(newJ*0.065) * 100)/ 100 : '';
         let value = [newJ, moneyC];
         return value;
         
@@ -22,7 +22,7 @@ class LiftStateUp extends PureComponent {
 
     calcToJ = (c) => {
         const newC = c.replace(/[^\d\.]/g, '');
-        const moneyJ = newC !== 0 && newC.length > 0 ? parseFloat(newC/0.65).toFixed(2) : '';
+        const moneyJ = newC !== 0 && newC.length > 0 ? Math.floor(parseFloat(newC/0.065) * 100)/ 100 : '';
         const value = [newC, moneyJ];
         return value;
     }

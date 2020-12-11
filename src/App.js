@@ -59,8 +59,8 @@ class App extends PureComponent {
         </header>
 
         <OneInput sub={this.trans} add={this.addBed}></OneInput>
-
         <div>app: {content}</div>
+        
         <Content content={content} house={house} topside={this.delete}></Content>
 
         <div>createForm: controlled components</div>

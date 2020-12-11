@@ -1,19 +1,15 @@
 import React,{PureComponent} from 'react';
 
 class Bed extends PureComponent {
-    state={
-    }
+    state={}
 
     handleDelete = () => {
-        const {id} = this.props;
-        const {onDelete} = this.props
-        console.log(id)
+        const {id, onDelete} = this.props;
         onDelete(id);
     }
 
     render() {
         const {name} = this.props;
-        // console.log(this.props)
 
         return (
             <div>

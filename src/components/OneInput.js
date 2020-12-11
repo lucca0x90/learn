@@ -23,7 +23,6 @@ class OneInput extends PureComponent {
         const twoValues = this.state.one + ', '+ this.state.second + '!';
         const one = this.state.one;
         const two = this.state.second;
-        console.log(twoValues);
         
         sub(twoValues);
         add(one,two);

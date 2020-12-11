@@ -5,7 +5,6 @@ class Message extends PureComponent {
 
     render() {
         const {country} = this.props;
-        // console.log('message', country);
 
         return (
             <div>

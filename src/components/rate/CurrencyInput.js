@@ -10,7 +10,6 @@ class CurrenctInput extends PureComponent {
 
     render() {
         const {country,  money} = this.props;
-        // console.log('input',country);
 
         return (
             <div>
